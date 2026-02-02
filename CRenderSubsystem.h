@@ -16,7 +16,7 @@
 class CRenderSubsystem : public ISubsystem
 {
 public:
-    CRenderSubsystem(): window(nullptr), renderer(nullptr) {}
+    CRenderSubsystem(): window(nullptr) {}
 
     ~CRenderSubsystem() override
     {
@@ -49,7 +49,6 @@ public:
     void Shutdown() override
     {
         window = nullptr;
-        renderer = nullptr;
     }
 
     void Update(float deltaSeconds) override
@@ -59,6 +58,8 @@ public:
 
     void Render(float averageFPS, float averageDeltaTime)
     {
+        //ImGui::ShowDemoWindow();
+
         ImGui::Begin("Hello World");
         ImGui::Text("FPS: %f\n", averageFPS);
         ImGui::Text("Avg Delta: %.4f s", averageDeltaTime);
@@ -66,14 +67,12 @@ public:
     }
     
     SDL_Window* GetWindow() { return window; }
-
-    SDL_Renderer* GetRenderer() { return renderer; }
-
+    
     SDL_GLContext GetGLContext() { return gl_context; }
 
     void OnBeginFrame(int red, int green, int blue)
     {
-        glClearColor(red, green, blue, 255);
+        glClearColor(red / 255.0f, green / 255.0f, blue / 255.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         
         ImGui_ImplOpenGL3_NewFrame();
@@ -91,7 +90,6 @@ public:
     
 private:
     SDL_Window* window;
-    SDL_Renderer* renderer;
     SDL_GLContext gl_context;
 };
 

@@ -84,7 +84,7 @@ public:
                 }
             }
 
-        averageFPS = ImGui::GetIO().Framerate;
+        //averageFPS = ImGui::GetIO().Framerate;
         //averageDeltaTime = 1000.0f / averageFPS;
     }
 

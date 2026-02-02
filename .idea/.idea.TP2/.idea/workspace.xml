@@ -8,7 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a6fee-8d01-498d-b8a2-d4318755c413" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRenderSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/CRenderSubsystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/TP2.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.Build.CppClean.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/Cl.items.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/Cl.items.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.secondary.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/vc143.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/external/SDL" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_axis.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_axis.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_axis_arrow.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_axis_arrow.h" afterDir="false" />
@@ -28,7 +40,6 @@
       <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_wireless.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_wireless.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/external/SDL/test/glass.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/glass.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/external/SDL/test/icon.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/icon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +114,7 @@
       <workItem from="1770061445587" duration="161000" />
       <workItem from="1770061971640" duration="1543000" />
       <workItem from="1770063635233" duration="172000" />
-      <workItem from="1770063995438" duration="4169000" />
+      <workItem from="1770063995438" duration="4821000" />
     </task>
     <servers />
   </component>
