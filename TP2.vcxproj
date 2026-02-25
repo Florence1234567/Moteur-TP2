@@ -140,10 +140,18 @@
     <ClCompile Include="external\imgui\imgui_draw.cpp" />
     <ClCompile Include="external\imgui\imgui_tables.cpp" />
     <ClCompile Include="external\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="GObject.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CComponent.h" />
+    <ClInclude Include="CEntity.h" />
+    <ClInclude Include="GAnimal.h" />
+    <ClInclude Include="CPageAllocator.h" />
     <ClInclude Include="external\imgui\backends\imgui_impl_sdl3.h" />
+    <ClInclude Include="GCat.h" />
+    <ClInclude Include="GDog.h" />
+    <ClInclude Include="GObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

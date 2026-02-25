@@ -8,7 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a6fee-8d01-498d-b8a2-d4318755c413" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CComponent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CEntity.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CPageAllocator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GAnimal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GCat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GDog.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GObject.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GObject.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CGameEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/CGameEngine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CGameSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/CGameSubsystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRenderSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/CRenderSubsystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/TP2.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.Build.CppClean.log" afterDir="false" />
@@ -21,25 +31,7 @@
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.secondary.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.secondary.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/link.write.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/vc143.idb" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/vc143.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_axis.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_axis.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_axis_arrow.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_axis_arrow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_back.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_back.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_battery.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_battery.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_battery_wired.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_battery_wired.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_button.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_button.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_button_background.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_button_background.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_button_small.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_button_small.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_face_abxy.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_face_abxy.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_face_axby.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_face_axby.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_face_bayx.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_face_bayx.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_face_sony.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_face_sony.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_front.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_front.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_touchpad.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_touchpad.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_wired.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_wired.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/gamepad_wireless.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/gamepad_wireless.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/glass.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/glass.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external/SDL/test/icon.h" beforeDir="false" afterPath="$PROJECT_DIR$/external/SDL/test/icon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/imgui.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +45,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/CPageAllocator.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GAnimal.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GCat.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GDog.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GObject.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/external/imgui/backends/imgui_impl_sdl3.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/external/imgui/imgui_widgets.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../NewTP2/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Moteur-TP3/GCat.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Moteur-TP3/main.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
@@ -68,20 +66,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ Project.TP2.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ Project.TP2.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TP2" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -115,6 +113,8 @@
       <workItem from="1770061971640" duration="1543000" />
       <workItem from="1770063635233" duration="172000" />
       <workItem from="1770063995438" duration="4821000" />
+      <workItem from="1771870085543" duration="59000" />
+      <workItem from="1771870244835" duration="11377000" />
     </task>
     <servers />
   </component>

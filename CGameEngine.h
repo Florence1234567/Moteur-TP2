@@ -6,6 +6,10 @@
 #include "CGameSubsystem.h"
 #include "CInputSubsystem.h"
 #include "CRenderSubsystem.h"
+#include "CPageAllocator.h"
+#include "GAnimal.h"
+#include "GCat.h"
+#include "GDog.h"
 
 class CGameEngine
 {
@@ -46,6 +50,13 @@ public:
         
         counter.Start();
 
+        GAnimal::RegisterProperties({ "name", EPropertyType::String, offsetof(GAnimal, name) });
+        
+        cat1 = NewObject<GCat>("Oreo");
+        cat2 = NewObject<GCat>("Daisy");
+        dog1 = NewObject<GDog>("Violette");
+        dog2 = NewObject<GDog>("Violet");
+        
         printf("Game Engine Init Done\n");
         
         return true;
@@ -64,7 +75,16 @@ public:
             inputSubsystem->Update(deltaSeconds);
             gameSubsystem->Update(deltaSeconds);
             
-            renderSubsystem->Render(gameSubsystem->GetAverageFPS(), gameSubsystem->GetAverageDeltaTime());
+            renderSubsystem->Render(
+                gameSubsystem->GetAverageFPS(),
+                gameSubsystem->GetAverageDeltaTime(),
+                gameSubsystem->GetEntities(),
+                pageAllocator.GetAvailable(),
+                pageAllocator.GetUsed(),
+                [this]() { return NewObject<CEntity>(); },
+                [this]() { return NewObject<CComponent>(); },
+                [this](CEntity* entity) { FreeObject(entity); },
+                [this](CComponent* component) { FreeObject(component); });
 
             renderSubsystem->OnEndFrame();
         }
@@ -72,6 +92,11 @@ public:
     
     void Shutdown()
     {
+        FreeObject(cat1);
+        FreeObject(cat2);
+        FreeObject(dog1);
+        FreeObject(dog2);
+        
         ImGui_ImplOpenGL3_Shutdown();
         ImGui_ImplSDL3_Shutdown();
         ImGui::DestroyContext();
@@ -109,6 +134,12 @@ public:
 
     CGameSubsystem* GetGame() { return gameSubsystem.get(); }
 
+    template<typename T, typename... Args>
+    T* NewObject(Args&&... args) { return pageAllocator.NewObject<T>(std::forward<Args>(args)...); }
+
+    template<typename T>
+    void FreeObject(T* object) { pageAllocator.FreeObject(object); }
+
 private:
     CGameEngine() = default;
     
@@ -118,6 +149,13 @@ private:
     std::unique_ptr<CInputSubsystem> inputSubsystem;
     std::unique_ptr<CGameSubsystem> gameSubsystem;
     CCounter counter;
+
+    CPageAllocator<128, 1024 * 1024> pageAllocator;
+
+    GCat* cat1 = nullptr;
+    GCat* cat2 = nullptr;
+    GDog* dog1 = nullptr;
+    GDog* dog2 = nullptr;
 };
 
 #endif

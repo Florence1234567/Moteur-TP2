@@ -8,6 +8,7 @@
 
 #include "CInputSubsystem.h"
 #include "CRenderSubsystem.h"
+#include "CEntity.h"
 
 class CGameSubsystem : public ISubsystem
 {
@@ -97,6 +98,8 @@ public:
     int GetGreen() const { return green; }
     
     int GetBlue() const { return blue; }
+
+    std::vector<CEntity*>& GetEntities() { return Entities; }
     
 private:
     CInputSubsystem* inputSubsystem;
@@ -111,6 +114,8 @@ private:
     int red;
     int green;
     int blue;
+
+    std::vector<CEntity*>  Entities;
 };
 
 #endif
