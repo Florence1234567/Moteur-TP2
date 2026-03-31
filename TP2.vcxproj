@@ -113,7 +113,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);opengl32.lib;SDL3.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)external/SDL/build/Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)x64/Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -142,6 +142,7 @@
     <ClCompile Include="external\imgui\imgui_widgets.cpp" />
     <ClCompile Include="GObject.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PrimeWorker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CComponent.h" />
@@ -152,6 +153,7 @@
     <ClInclude Include="GCat.h" />
     <ClInclude Include="GDog.h" />
     <ClInclude Include="GObject.h" />
+    <ClInclude Include="PrimeWorker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -9,11 +9,12 @@
 #include "CInputSubsystem.h"
 #include "CRenderSubsystem.h"
 #include "CEntity.h"
+#include "PrimeWorker.h"
 
 class CGameSubsystem : public ISubsystem
 {
 public:
-    CGameSubsystem(): frameIndex(0), frameCount(0), timeSinceLastUpdate(0.0f), averageFPS(0.0f), averageDeltaTime(0.0f), inputSubsystem(nullptr), red(0), green(0), blue(0)
+    CGameSubsystem(): frameIndex(0), frameCount(0), timeSinceLastUpdate(0.0f), averageFPS(0.0f), averageDeltaTime(0.0f), inputSubsystem(nullptr), red(0), green(0), blue(0), timeSinceLastPoll(0.0f)
     {
         for (int i = 0; i < 100; ++i)
             frameTimes[i] = 0.0f;
@@ -37,7 +38,7 @@ public:
 
     void Shutdown() override
     {
-        
+        StopWorker(Worker);
     }
 
     void Update(float deltaSeconds) override
@@ -87,6 +88,24 @@ public:
 
         //averageFPS = ImGui::GetIO().Framerate;
         //averageDeltaTime = 1000.0f / averageFPS;
+
+        //Threads
+        if (Worker.running.load())
+        {
+            timeSinceLastPoll += deltaSeconds;
+
+            if (timeSinceLastPoll >= 2.0f)
+            {
+                timeSinceLastPoll = 0.0f;
+
+                std::vector<int> newPrimes;
+
+                PollWorker(Worker, newPrimes);
+                
+                for (int prime : newPrimes)
+                    collectedPrimes.push_back(prime);
+            }
+        }
     }
 
     float GetAverageFPS() { return averageFPS; }
@@ -100,6 +119,9 @@ public:
     int GetBlue() const { return blue; }
 
     std::vector<CEntity*>& GetEntities() { return Entities; }
+
+    PrimeWorker& GetPrimeWorker() { return Worker; }
+    std::vector<int>& GetCollectedPrimes() { return collectedPrimes; }
     
 private:
     CInputSubsystem* inputSubsystem;
@@ -116,6 +138,10 @@ private:
     int blue;
 
     std::vector<CEntity*>  Entities;
+
+    PrimeWorker Worker;
+    std::vector<int> collectedPrimes;
+    float timeSinceLastPoll;
 };
 
 #endif

@@ -84,7 +84,9 @@ public:
                 [this]() { return NewObject<CEntity>(); },
                 [this]() { return NewObject<CComponent>(); },
                 [this](CEntity* entity) { FreeObject(entity); },
-                [this](CComponent* component) { FreeObject(component); });
+                [this](CComponent* component) { FreeObject(component); },
+                gameSubsystem->GetPrimeWorker(),
+                gameSubsystem->GetCollectedPrimes());
 
             renderSubsystem->OnEndFrame();
         }

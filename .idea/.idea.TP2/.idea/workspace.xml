@@ -8,20 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764a6fee-8d01-498d-b8a2-d4318755c413" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CComponent.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CEntity.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CPageAllocator.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GAnimal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GCat.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GDog.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GObject.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrimeWorker.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrimeWorker.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TP2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CGameEngine.h" beforeDir="false" afterPath="$PROJECT_DIR$/CGameEngine.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CGameSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/CGameSubsystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRenderSubsystem.h" beforeDir="false" afterPath="$PROJECT_DIR$/CRenderSubsystem.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/TP2.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.Build.CppClean.log" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.Build.CppClean.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.read.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/TP2/x64/Debug/TP2.tlog/CL.write.1.tlog" afterDir="false" />
@@ -50,13 +43,15 @@
     <setting file="file://$PROJECT_DIR$/GCat.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GDog.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GObject.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PrimeWorker.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PrimeWorker.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/external/imgui/backends/imgui_impl_sdl3.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/external/imgui/imgui_widgets.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Moteur-TP3/GCat.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Moteur-TP3/main.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -114,7 +109,9 @@
       <workItem from="1770063635233" duration="172000" />
       <workItem from="1770063995438" duration="4821000" />
       <workItem from="1771870085543" duration="59000" />
-      <workItem from="1771870244835" duration="11377000" />
+      <workItem from="1771870244835" duration="11431000" />
+      <workItem from="1774958884574" duration="3233000" />
+      <workItem from="1774963457198" duration="1035000" />
     </task>
     <servers />
   </component>

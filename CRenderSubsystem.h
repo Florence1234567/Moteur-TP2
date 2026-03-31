@@ -9,6 +9,8 @@
 #include <backends/imgui_impl_sdl3.h>
 
 #include "ISubsystem.h"
+#include "PrimeWorker.h"
+
 #include <iostream>
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
@@ -69,7 +71,9 @@ public:
         std::function<CEntity*()> NewEntity,
         std::function<CComponent*()> NewComponent,
         std::function<void(CEntity*)> FreeEntity,
-        std::function<void(CComponent*)> FreeComponent)
+        std::function<void(CComponent*)> FreeComponent,
+        PrimeWorker& Worker,
+        std::vector<int>& collectedPrimes)
     {
         //ImGui::ShowDemoWindow();
 
@@ -147,6 +151,54 @@ public:
             }
         }
         
+        ImGui::End();
+
+        //Prime numbers
+        ImGui::SetNextWindowPos(ImVec2(420, 10), ImGuiCond_Once);
+        ImGui::SetNextWindowSize(ImVec2(340, 400), ImGuiCond_Once);
+        ImGui::Begin("Prime Numbers");
+
+        const bool bIsRunning = Worker.running.load();
+
+        if (!bIsRunning)
+        {
+            if (ImGui::Button("Start Thread"))
+                StartWorker(Worker);
+        }
+        else
+        {
+            if (ImGui::Button("End Thread"))
+                StopWorker(Worker);
+        }
+
+        ImGui::SameLine();
+        ImGui::TextDisabled(bIsRunning ? "(running...)" : "(stopped)");
+
+        ImGui::Separator();
+
+        ImGui::Text("Collected Primes : %d", (int)collectedPrimes.size());
+
+        ImGui::Separator();
+
+        if (ImGui::TreeNode("Prime Number List"))
+        {
+            ImGui::BeginChild("##primes_scroll", ImVec2(0, 200), true);
+
+            for (int i = 0; i < (int)collectedPrimes.size(); i++)
+            {
+                if (i > 0 && i % 8 != 0)
+                    ImGui::SameLine();
+
+                ImGui::Text("%d", collectedPrimes[i]);
+            }
+
+            if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
+                ImGui::SetScrollHereY(1.0f);
+
+            ImGui::EndChild();
+            ImGui::TreePop();
+        }
+
         ImGui::End();
     }
     
